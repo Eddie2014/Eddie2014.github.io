@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Eddie Zheng</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<style>
+/*first page panels */
+i{
+  font-size:32px;
+  color: green;
+  padding-right:10px;
+  margin-left:-50px;
+}
+.body{
+  color:black;
+}
+.intro{
+  min-height:100vh;
+  text-align:center;
+  display:flex;
+  flex-direction: row;
+  background-image:url(http://www.zarofil.com/i/2017/05/black-abstract-wallpapers-widescreen.jpg);
+  background-position:center;
+  background-size:cover;
+}
+.rightpanel{
+  border-style:solid;
+  border-color:black;
+  flex-grow:2;
+}
+.rightpanel h1 {
+    margin-bottom: 0;
+    font-family: "ff-good-headline-web-pro-con",sans-serif;
+    line-height: .95;
+    color: #66fcf1;
+    font-weight: 900;
+    text-transform: uppercase;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+    font-size:250px;
+}
+.rightpanel h6 {
+    max-width: 710px;
+    margin: 0 auto 42px;
+    line-height: 1.42;
+    color: black;
+    font-weight: 300;
+}
+
+/*middle panels*/
+.panels {
+  min-height:100vh;
+  overflow: hidden;
+  display: flex;
+  padding-left:350px;
+}
+.panel {
+  color:white;
+  align-items:center;
+  transition:
+    font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    background 0.2s;
+  font-size: 20px;
+  background-size:cover;
+
+  background-position:center;
+  padding-right:10px;
+  background-color: white;
+  flex: 3;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.panel > * {
+  margin:0;
+  width: 100%;
+  transition:transform 0.5s;
+  flex: 1 0 auto;
+  align-items: center;
+
+}
+.panel p {
+  color:#757575;
+  font-size:14px;
+  font-family: 'Roboto';
+  line-height:1.6;
+}
+.panel li {
+  color:#757575;
+  font-size:13px;
+  font-family: 'Roboto';
+}
+
+.panel.open {
+  flex-grow: 15;
+  font-size:40px;
+}
+
+
+#myProgress {
+    width: 50%;
+    background-color: #e4e3e8;
+    border-radius: 10px;
+}
+#myBarC {
+    width: 80%;
+    border-radius: 10px;
+    height: 10px;
+    background-color: #7a7a7c;
+}
+#myBarJavaScript {
+    width: 85%;
+    border-radius: 10px;
+    height: 10px;
+    background-color: #7a7a7c;
+}
+#myBarHTML {
+    width: 90%;
+    border-radius: 10px;
+    height: 10px;
+    background-color: #7a7a7c;
+}
+#myBarCSS {
+    width: 90%;
+    border-radius: 10px;
+    height: 10px;
+    background-color: #7a7a7c;
+}
+#myBarPython {
+    width: 70%;
+    border-radius: 10px;
+    height: 10px;
+    background-color: #7a7a7c;
+}
+
+/* bottom panels*/
+.panelsBOTTOM {
+  min-height:100vh;
+  overflow: hidden;
+  display: flex;
+  padding-left:350px;
+}
+.panelBOTTOM {
+  background:#6B0F9C;
+  box-shadow:inset 0 0 0 5px rgba(255,255,255,0.1);
+  color:white;
+  text-align: center;
+  align-items:center;
+  /* Safari transitionend event.propertyName === flex */
+  /* Chrome + FF transitionend event.propertyName === flex-grow */
+  transition:
+    font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    background 0.2s;
+  font-size: 20px;
+  background-size:cover;
+  background-position:center;
+  flex: 1;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.panel1BOTTOM { background-image:url(https://source.unsplash.com/gYl-UtwNg_I/1500x1500); }
+.panel2BOTTOM { background-image:url(https://source.unsplash.com/1CD3fd8kHnE/1500x1500); }
+.panel3BOTTOM { background-image:url(https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&w=1500&h=1500&fit=crop&s=967e8a713a4e395260793fc8c802901d); }
+.panel4BOTTOM { background-image:url(https://source.unsplash.com/ITjiVXcwVng/1500x1500); }
+.panel5BOTTOM { background-image:url(https://source.unsplash.com/3MNzGlQM7qs/1500x1500); }
+.panelBOTTOM > * {
+  margin:0;
+  width: 100%;
+  transition:transform 0.5s;
+  flex: 1 0 auto;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.panelBOTTOM > *:first-child { transform: translateY(-100%); }
+.panelBOTTOM.open-active > *:first-child { transform: translateY(0); }
+.panelBOTTOM > *:last-child { transform: translateY(100%); }
+.panelBOTTOM.open-active > *:last-child { transform: translateY(0); }
+.panelBOTTOM p {
+  text-transform: uppercase;
+  font-family: 'Amatic SC', cursive;
+  text-shadow:0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+  font-size: 2em;
+}
+.panelBOTTOM p:nth-child(2) {
+  font-size: 4em;
+}
+.panelBOTTOM.open {
+  flex: 5;
+  font-size:40px;
+}
+
+.left-panel{
+  min-height:90vh;
+  position:fixed;
+  width:15%;
+  background-color:white;
+  box-shadow: 1px 1px 5px black;
+  margin:20px 20px;
+  text-align:center;
+
+}
+
+/*h and fontstyles */
+h6 p {
+    font-size: 24px;
+    font-family:"tablet-gothic-narrow",sans-serif;
+    color:white;
+    line-height: 1.42;
+}
+h3{
+  color:black;
+  font-size: 30px;
+  text-align: center;
+}
+h4{
+  color:#757575;
+  font-size: 20px;
+  margin-bottom:0px;
+}
+h5{
+    font-size:20px;
+    font-family:"tablet-gothic-narrow",sans-serif;
+    margin-bottom:0px;
+}
+h6{
+    margin-top:2px;
+    font-size:15px;
+    font-family:"tablet-gothic-narrow",sans-serif;
+}
+button {
+  width:100%;
+  border-bottom:none;
+  border-right:none;
+  box-shadow:none;
+  background-color: white;
+  font-family:"tablet-gothic-narrow",sans-serif;
+}
+.bottom{
+  top-margin:100px;
+}
+
+.hideme
+{
+    opacity:0;
+}
+
+</style>
+
+<div class="left-panel">
+  <div class="top">
+    <img src="https://lh3.googleusercontent.com/-R7fXGVsRjkQ/AAAAAAAAAAI/AAAAAAAAAAY/cbESGBKXJSs/s265-c-k-no/photo.jpg" alt="Mountain View" style="width:100%;height:228px;">
+    <h5>Eddie Zheng</h5>
+    <h6>Engineering/Web Developer</h6>
+  </div>
+  <div class="buttons">
+    <button type="button">Welcome</button>
+    <button type="button">Resume</button>
+    <button type="button">Portfolio</button>
+  </div>
+  <div class="bottom">
+    <p>Connect</p>
+  </div>
+</div>
+<div class="intro">
+  <div class="rightpanel">
+    <h1 class="home">hello</h1>
+    <h6>
+      <p>Thank you for visiting my website!
+         This is an expression of my interest in web technologies.
+         I created this website using HTML, CSS, JavaScript and a fun framework like
+         Flexbox!I am always on the move to master a skill and apply it.
+         Below you will find a collection of my skills and side projects.
+       </p>
+    </h6>
+  </div>
+  <!-- <div class="leftpanel">
+    <h6>
+    <p>Testing</p>
+    </h6>
+  </div> -->
+</div>
+
+<div class="panels">
+  <div class="panel panel2 hideme">
+    <span>
+    <h3><i class="fa fa-user-o" aria-hidden="true"></i>ABOUT ME</h3>
+      <p>I always knew I wanted to do something relating to the computer. Now i know
+      I want to learn about the web. It is amazing; the amount of potential
+    the web has is unimaginable </p>
+    <p>Particualrly, i want to develop web applications. It is truly cool to learn
+    that I am exploiting multiple different language, frameworks and even databases to develop
+  something people call a tool.</p>
+    <p>Currently, I am on the journey of mastering JavasScript through online resources with the intention of learning
+      MongoDB and Node.JS.
+    </p>
+    </span>
+    <span>
+      <h3><i class="fa fa-wrench" aria-hidden="true"></i>WORK EXPERIENCE</h3>
+      <h4>Retail</h4>
+      <ul>
+        <li>Responsible for Issuing warranty for batteries worth over $100.</li>
+        <li>Used communication skills to help customers find merchandise.</li>
+        <li>Initiated teamwork skills and organizational skills to maintain excellent workspace</li>
+      </ul>
+    </span>
+  </div>
+  <div class="panel panel3 hideme">
+    <span>
+      <h3><i class="fa fa-laptop" aria-hidden="true"></i></i>TECHNICAL SKILLS</h3>
+      <h4>Languages:</h4>
+      <p>C++, JavaScript, HTML, CSS, Python</p>
+      <h4>Software:</h4>
+      <p>Eclipse, Visual Studio, Codeblocks, Atom.io</p>
+      <h4>Technologies:</h4>
+      <p>Selenium, jQuery, Bootstrap, Flexbox</p>
+      <h4>Platforms:</h4>
+      <p>Windows, Linux</p>
+    </span>
+    <span>
+      <h3><i class="fa fa-level-up" aria-hidden="true"></i>TECHNICAL LANGUAGES</h3>
+
+    <div>
+      <div id="myProgress">
+        <div id="myBarC"></div>
+      </div>
+      <p>C++</p>
+      <div id="myProgress">
+        <div id="myBarJavaScript"></div>
+      </div>
+      <p>JavaScript</p>
+      <div id="myProgress">
+        <div id="myBarHTML"></div>
+      </div>
+      <p>HTML</p>
+      <div id="myProgress">
+        <div id="myBarCSS"></div>
+      </div>
+      <p>CSS</p>
+      <div id="myProgress">
+        <div id="myBarPython"></div>
+      </div>
+      <p>Python</p>
+    </div>
+
+    </span>
+  </div>
+  <div class="panel panel4 hideme">
+    <span>
+    <h3><i class="fa fa-folder-open-o" aria-hidden="true"></i>SELF-DRIVEN PROJECTS</h3>
+    <h4>Gas Fill App</h4>
+    <ul>
+      <li>A webapp that takes in the exact model of your vehicle, shows the fuel efficiency, and shows ideal gas location to fill up for best bang for a buck for long roadtrips</li>
+      <li>implemented ability to determine statistics about exact vehicle model.</li>
+      <li>Implemented ability to determine lowest gas prices.</li>
+      <li>Implemented ability to plan trip and find shortest route.</li>
+      <li>Exploits Javascript, JQuery, HTML, CSS, Bootstrap technology.</li>
+      <li>Used JQuery to access car API, gas station API and google maps API.</li>
+    </ul>
+    <h4>Instagram Marketing Script</h4>
+    <ul>
+      <li>Created script that simulates a typically instagram user.</li>
+      <li>implemented ability to like.</li>
+      <li>Implemented ability to comment.</li>
+      <li>Implemented ability to follow.</li>
+      <li>Explots Selenium library.</li>
+    </ul>
+    <h4>FreeCodeCamp</h4>
+    <ul>
+      <li>Learning web development from one of the biggest open source platform</li>
+      <li>Actively working on HTML, CSS, JavaScript and Algorithms</li>
+      <li>Created numerous projects to reinforce knowledge.</li>
+      <li>Planning to learn Node.Js, Express.JS and MongoDB.</li>
+    </ul>
+    </span>
+  </div>
+  <div class="panel panel5 hideme">
+    <span>
+      <h3><i class="fa fa-book" aria-hidden="true"></i>School Projects</h3>
+      <h4>CMPT 225: Data Structures and Programming</h4>
+      <ul>
+        <li>Created a Binary Search Tree for customer data</li>
+        <li>Learned to use classes, objects, constructors, name spaces, and recursion</li>
+        <li>Applied inheritance, polymorphism, encapsulation, and abstraction</li>
+        <li>Used Atom.io and Linux</li>
+      </ul>
+      <h4>CMPT 225: Data Structures and Programming</h4>
+      <ul>
+        <li>Simulated a banking situtation</li>
+        <li>Used vectors to store objects</li>
+        <li>Learned about vector functions</li>
+        <li>Learned to use classes and their private and public properties</li>
+      </ul>
+      <h4>ENSC 251: Software Design and Analysis for Engineers</h4>
+      <ul>
+        <li>Classified tokens.</li>
+        <li>Learned to use find_first_of, find_first_not_of.</li>
+        <li>Worked with vectors.</li>
+        <li>Learned the importance of indexing.</li>
+      </ul>
+    </span>
+  </div>
+</div>
+
+<!---bottom panels-->
+<div class="panelsBOTTOM hideme">
+  <div class="panelBOTTOM panel1BOTTOM">
+    <p>NOTHING</p>
+    <p>NOTHING</p>
+    <p>NOTHING</p>
+  </div>
+  <div class="panelBOTTOM panel2BOTTOM">
+    <p>NOTHING</p>
+    <p>PROJ1</p>
+    <p>NOTHING</p>
+  </div>
+  <div class="panelBOTTOM panel3BOTTOM">
+    <p>NOTHING</p>
+    <p>PROJ2</p>
+    <p>NOTHING</p>
+  </div>
+  <div class="panelBOTTOM panel4BOTTOM">
+    <p>NOTHING</p>
+    <p>PROJ3</p>
+    <p>NOTHING</p>
+  </div>
+  <div class="panelBOTTOM panel5BOTTOM">
+    <p>NOTHING</p>
+    <p>PROJ4</p>
+    <p>NOTHING</p>
+  </div>
+</div>
+
+
+<script>
+  const panelsBOTTOM = document.querySelectorAll('.panelBOTTOM');
+  const panels = document.querySelectorAll('.panel');
+
+  function toggleOpen() {
+    console.log('Hello');
+    this.classList.toggle('open');
+  }
+
+  function toggleActive(e) {
+    console.log(e.propertyName);
+    if (e.propertyName.includes('flex')) {
+      this.classList.toggle('open-active');
+    }
+  }
+
+  panels.forEach(panel => panel.addEventListener('click', toggleOpen));
+  panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
+
+  panelsBOTTOM.forEach(panel => panel.addEventListener('click', toggleOpen));
+  panelsBOTTOM.forEach(panel => panel.addEventListener('transitionend', toggleActive));
+
+  //fadeIn features using jQuery
+
+  $(document).ready(function() {
+
+    /* Every time the window is scrolled ... */
+    $(window).scroll( function(){
+
+        /* Check the location of each desired element */
+        $('.hideme').each( function(i){
+
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object-500 ){
+
+                $(this).animate({'opacity':'1'},1500);
+
+            }
+
+        });
+
+    });
+
+});
+
+
+</script>
+
+
+</html>
