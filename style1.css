@@ -1,0 +1,295 @@
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    /* nav bar*/
+    #colorNav > ul{
+    	width: 400px; /* Increase when adding more menu items */
+      position:fixed;
+      margin-top:250px;
+      display:table-cell;
+      vertical-align:middle;
+    }
+
+    #colorNav > ul > li{ /* will style only the top level li */
+    	list-style: none;
+    	box-shadow: 0 0 10px rgba(100, 100, 100, 0.2) inset,1px 1px 1px #CCC;
+    	line-height: 1;
+    	margin: 1px;
+    	border-radius: 3px;
+    	position:relative;
+      display:table;
+    }
+
+    #colorNav > ul > li > a{
+    	color:inherit;
+    	text-decoration:none !important;
+    	font-size:24px;
+    	padding: 15px;
+      display:table-cell;
+      vertical-align: middle;
+      transition: background-color 0.5s ease-in-out;
+    }
+    #colorNav > ul > li > a:hover{
+      background: rgba(0,0,0,0.2);
+    }
+
+    /*----------------------------
+    	Color Themes
+    -----------------------------*/
+
+
+    #colorNav li.green{
+    	/* This is the color of the menu item */
+    	background-color:#00c08b;
+
+    	/* This is the color of the icon */
+    	color:#127a5d;
+    }
+
+    #colorNav li.red{		background-color:#ea5080;color:#aa2a52;}
+    #colorNav li.blue{		background-color:#53bfe2;color:#2884a2;}
+    #colorNav li.yellow{	background-color:#f8c54d;color:#ab8426;}
+    #colorNav li.purple{	background-color:#df6dc2;color:#9f3c85;}
+
+
+    /*--circles--*/
+    .menu{
+      padding: 10px 0px;
+      margin: 150px auto;
+      background:rgba(0,0,0,0.7);
+      width:500px;
+      height:500px;
+      border-radius:300px;
+      position:relative;
+      transition: background-color 0.5s ease-in-out;
+      display:table;
+    }
+    .menu:hover{
+      background: rgba(0,0,0,0.2);
+    }
+
+    .menuB{
+      background:rgba(0,0,0,0.2);
+      border-radius:15px;
+      margin:100px auto 0;
+      width:500px;
+    }
+
+
+    #box1{
+        height: 100vh;
+        width: 100%;
+        background-image: url(i1.jpg);
+        background-size: cover;
+        display: table;
+        background-attachment: fixed;
+    }
+    #box2{
+        height: 100vh;
+        width: 100%;
+        background-image: url(i2.jpg);
+        background-size: cover;
+        display: table;
+        background-attachment: fixed;
+    }
+    #box3{
+        height: 100vh;
+        width: 100%;
+        background-image: url(i3.jpg);
+        background-size: cover;
+        display: table;
+        background-attachment: fixed;
+    }
+
+    .contentH1{
+      color:#333333;
+    }
+    .container{
+      min-height:100vh;
+      display:flex;
+      align-items: center;
+    }
+    .containerB{
+      margin:0;
+      padding:0;
+      text-align: center;
+    }
+    .items p{
+      color:#333333;
+      padding-right:200px;
+      font-size:20px;
+      font-family: 'Roboto';
+      line-height:1.6;
+    }
+
+    .panel1{
+      padding-left:100px;
+    }
+    .panel2{
+      min-height: 100vh;
+      display:flex;
+      align-items:center;
+      padding:0 50px 0 0;
+      margin:0;
+
+    }
+
+
+
+    #box4{
+        height: 100vh;
+        width: 100%;
+        background-image: url(i4.png);
+        display: table;
+        background-attachment: fixed;
+    }
+    #box5{
+        height: 100vh;
+        width: 100%;
+        background-image: url(i5.png);
+        display: table;
+        background-attachment: fixed;
+    }
+    .containerB p{
+      color:#333333;
+      font-size:20px;
+      font-family: 'Roboto';
+      line-height:1.6;
+      margin:0;
+    }
+    .containerB h4{
+      font-size:20px;
+      font-family: 'Roboto';
+      line-height:1.6;
+      margin:10px 0;
+    }
+    #box6{
+        height: 100vh;
+        width: 100%;
+        background-image: url(i6.png);
+        display: table;
+        background-attachment: fixed;
+    }
+
+    .slideanim {visibility:hidden;}
+    .slide {
+    /* The name of the animation */
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    /* The duration of the animation */
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    /* Make the element visible */
+    visibility: visible;
+    }
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+    @keyframes slide {
+        0% {
+            opacity: 0;
+            transform: translateY(70%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0%);
+        }
+    }
+    @-webkit-keyframes slide {
+        0% {
+            opacity: 0;
+            -webkit-transform: translateY(70%);
+        }
+        100% {
+            opacity: 1;
+            -webkit-transform: translateY(0%);
+        }
+    }
+    .projects{
+      color:white;
+      width:100vh;
+
+    }
+
+    #box7{
+        height: 100vh;
+        width: 100%;
+        display: table;
+        background-attachment: fixed;
+    }
+
+    #box8{
+        height: 100vh;
+        width: 100%;
+        background-color: grey;
+        display: table;
+        background-attachment: fixed;
+    }
+    h1{
+        font-family: arial black;
+        font-size: 40px;
+        text-shadow: 0px 0px 3px #fff;
+        color:transparent;
+        margin: 0px;
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+
+    /* bottom panels*/
+    .panelsBOTTOM {
+      min-height:100vh;
+      overflow: hidden;
+      display: flex;
+    }
+    .panelBOTTOM {
+      background:#6B0F9C;
+      box-shadow:inset 0 0 0 5px rgba(255,255,255,0.1);
+      color:white;
+      text-align: center;
+      align-items:center;
+      /* Safari transitionend event.propertyName === flex */
+      /* Chrome + FF transitionend event.propertyName === flex-grow */
+      transition:
+        font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+        flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+        background 0.2s;
+      font-size: 20px;
+      background-size:cover;
+      background-position:center;
+      flex: 1;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+    }
+    .panel1BOTTOM { background-image:url(http://www.theotherslegion.com/wp-content/uploads/2016/02/software_bg.jpg); }
+    .panel2BOTTOM { background-image:url(http://www.theotherslegion.com/wp-content/uploads/2016/02/software_bg.jpg); }
+    .panel3BOTTOM { background-image:url(http://www.theotherslegion.com/wp-content/uploads/2016/02/software_bg.jpg); }
+    .panel4BOTTOM { background-image:url(http://www.theotherslegion.com/wp-content/uploads/2016/02/software_bg.jpg); }
+    .panel5BOTTOM { background-image:url(http://www.theotherslegion.com/wp-content/uploads/2016/02/software_bg.jpg); }
+    .panelBOTTOM > * {
+      margin:0;
+      width: 100%;
+      transition:transform 0.5s;
+      flex: 1 0 auto;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .panelBOTTOM > *:first-child { transform: translateY(-100%); }
+    .panelBOTTOM.open-active > *:first-child { transform: translateY(0); }
+    .panelBOTTOM > *:last-child { transform: translateY(100%); }
+    .panelBOTTOM.open-active > *:last-child { transform: translateY(0); }
+    .panelBOTTOM p {
+      text-transform: uppercase;
+
+    }
+    .panelBOTTOM p:nth-child(2) {
+      font-size: 4em;
+    }
+    .panelBOTTOM.open {
+      flex: 5;
+      font-size:40px;
+    }
+</style>
