@@ -5,7 +5,7 @@
     }
     /* nav bar*/
     #colorNav > ul{
-    	width: 400px; /* Increase when adding more menu items */
+    	width: 500px; /* Increase when adding more menu items */
       position:fixed;
       margin-top:250px;
       display:table-cell;
@@ -71,10 +71,27 @@
     }
 
     .menuB{
-      background:rgba(0,0,0,0.2);
-      border-radius:15px;
+      font-size:36px;
+      font-weight:500;
+      line-height: 1.1;
+      color:#333333;
+      border-radius:12px;
       margin:100px auto 0;
       width:500px;
+    }
+    .menuA{
+      padding-left:100px;
+      font-size:36px;
+      font-weight:500;
+      line-height: 1.1;
+      color:#333333;
+      border-radius:12px;
+      margin:100px auto 0;
+      width:500px;
+    }
+    .tech-icons{
+      padding-left:150px;
+      font-size: 100px;
     }
 
 
@@ -85,6 +102,18 @@
         background-size: cover;
         display: table;
         background-attachment: fixed;
+    }
+    #hey{
+      font-size: 35px;
+      font-weight: bold;
+    }
+    #eddie{
+      font-size: 30px;
+      font-weight: bold;
+    }
+    #web{
+      font-size: 25px;
+      font-weight: bold;
     }
     #box2{
         height: 100vh;
@@ -152,6 +181,9 @@
         display: table;
         background-attachment: fixed;
     }
+    .flex-container{
+      flex-wrap:wrap;
+    }
     .containerB p{
       color:#333333;
       font-size:20px;
@@ -206,17 +238,90 @@
         }
     }
     .projects{
-      color:white;
-      width:100vh;
+      width: 100%;
+    }
+    .row{
+      display:flex;
+      justify-content: center;
+    }
+    .row2{
+      display:flex;
+      justify-content: center;
 
     }
-
     #box7{
         height: 100vh;
         width: 100%;
+        background-image: url(i7.png);
         display: table;
         background-attachment: fixed;
     }
+    .projectBox{
+      transition: background-color 0.10s ease-in-out;
+      width:300px;
+      height:350px;
+      position:relative;
+      overflow:hidden;
+    }
+    .projectBox img{
+      padding-right: 20px;
+      width:300px;
+      height:300px;
+      transition: 0.10s;
+    }
+    .projectBox img:hover{
+      opacity:.2;
+    }
+
+    .textBox{
+      position:absolute;
+      top:0;
+      left:-100%;
+      width:280px;
+      height:100%;
+      transition: .5s;
+      background:rgba(0,0,0,0.2);
+      height:300px;
+
+    }
+    .projectBox:hover .textBox{
+      left:0%;
+    }
+    .containerFlex{
+      width:90%;
+      height:200px;
+      display:flex;
+      box-sizing: border-box;
+      position:absolute;
+      padding-left: 100px;
+      margin-top:150px;
+    }
+    .boxFlex{
+      width:auto;
+      text-align:center;
+      flex-grow:1;
+      transition:.5;
+      color:#fff;
+      background:#f00;
+
+
+    }
+    .boxFlex:hover{
+      flex-grow: 4;
+      max-width: 100%;
+      font-size:2em;
+      height:400px;
+    }
+    .containerFlex .boxFlex:nth-child(1){
+      background:#f1c40f;
+    }
+    .containerFlex .boxFlex:nth-child(2){
+      background:#9b59b6;
+    }
+    .containerFlex .boxFlex:nth-child(3){
+      background:#95a5a6;
+    }
+
 
     #box8{
         height: 100vh;
